@@ -1,0 +1,383 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "info dispositivos",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "no importa",
+                        "olvídalo",
+                        "cancela"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "no sé qué hacer",
+                        "necesito ayuda",
+                        "en qué puedes ayudarme",
+                        " como puedes ayudarme",
+                        "me puedes ayudar",
+                        "puedes ayudarme",
+                        "ayúdame",
+                        "Ayuda"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "para",
+                        "detente",
+                        "salir",
+                        "chao",
+                        "hasta luego",
+                        "adios"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": [
+                        "ve a la pantalla principal",
+                        "navega hasta la pantalla principal"
+                    ]
+                },
+                {
+                    "name": "GetDevicesIntent",
+                    "slots": [],
+                    "samples": [
+                        "cómo se encuentran mis dispositivos",
+                        "dime como estan todos los dispositivos",
+                        "Cuál es el estado de todos mis dispositivos",
+                        "Cuál es el estado de todos los dispositivos",
+                        "Cuál es el estado de los dispositivos",
+                        "En qué estado están mis dispositivos",
+                        "Como están mis dispositivos",
+                        "Cuál es el estado de mis dispositivos"
+                    ]
+                },
+                {
+                    "name": "GetSpecificDeviceIntent",
+                    "slots": [
+                        {
+                            "name": "dispositivo",
+                            "type": "DeviceName"
+                        }
+                    ],
+                    "samples": [
+                        "dime el estado del {dispositivo}",
+                        "dime el estado de la {dispositivo}",
+                        "dime el estado de {dispositivo}",
+                        "dime como está la {dispositivo}",
+                        "dime como está el {dispositivo}",
+                        "como está el {dispositivo}",
+                        "como está la {dispositivo}",
+                        "cuál es el estado de la {dispositivo}",
+                        "cuál es el estado del {dispositivo}"
+                    ]
+                },
+                {
+                    "name": "CommandDescriptionIntent",
+                    "slots": [
+                        {
+                            "name": "TipoAyuda",
+                            "type": "Question",
+                            "samples": [
+                                "{TipoAyuda}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "En qué me puedes ayudar",
+                        "Qué puedes hacer",
+                        "necesito más ayuda",
+                        "Qué puedo decir",
+                        "Qué puedes hacer por mi"
+                    ]
+                },
+                {
+                    "name": "UpdateDeviceIntent",
+                    "slots": [
+                        {
+                            "name": "dispositivo",
+                            "type": "DeviceName"
+                        },
+                        {
+                            "name": "propiedad",
+                            "type": "Property",
+                            "samples": [
+                                "la {propiedad}",
+                                "el {propiedad}",
+                                "pon la {dispositivo} de {propiedad} {parametrosColor}",
+                                "pon el {propiedad} de la {dispositivo} a {parametrosBrillo}",
+                                "pon el {propiedad} de la {dispositivo} a {parametrosColor}",
+                                "cambia el {propiedad} de la {dispositivo} a {parametrosBrillo} ",
+                                "cambia el {propiedad} de la {dispositivo} al {parametrosBrillo} ",
+                                "cambia el {propiedad} de la {dispositivo} a {parametrosColor}",
+                                "{propiedad} el {dispositivo}",
+                                "{propiedad} la {dispositivo}"
+                            ]
+                        },
+                        {
+                            "name": "parametrosColor",
+                            "type": "AMAZON.Color"
+                        },
+                        {
+                            "name": "parametrosBrillo",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "{propiedad} {dispositivo}",
+                        "{propiedad} las {dispositivo}",
+                        "pon el {propiedad} de la {dispositivo} en {parametrosColor}",
+                        "pon el {propiedad} de la {dispositivo} al {parametrosBrillo}",
+                        "pon la {dispositivo} de {propiedad} {parametrosColor}",
+                        "pon el {propiedad} de la {dispositivo} a {parametrosBrillo}",
+                        "pon el {propiedad} de la {dispositivo} a {parametrosColor}",
+                        "cambia el {propiedad} de la {dispositivo} a {parametrosBrillo} ",
+                        "cambia el {propiedad} de la {dispositivo} al {parametrosBrillo} ",
+                        "cambia el {propiedad} de la {dispositivo} a {parametrosColor}",
+                        "{propiedad} el {dispositivo}",
+                        "{propiedad} la {dispositivo}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "Question",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "preguntar por el estado de los dispositivos",
+                                "synonyms": [
+                                    "preguntar"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "como cambiar su estado",
+                                "synonyms": [
+                                    "cambiar"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Property",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "brillo"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "color"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "enciende",
+                                "synonyms": [
+                                    "encienda",
+                                    "enciende"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "apaga",
+                                "synonyms": [
+                                    "apague",
+                                    "apaga"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ActionParameters",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "azul"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "rojo"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "DeviceName",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "todos los dispositivos"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "todas las bombillas"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "enchufe"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bombilla"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "tercera bombilla"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "segunda bombilla"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "primera bombilla"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "GetSpecificDeviceIntent",
+                    "delegationStrategy": "ALWAYS",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "dispositivo",
+                            "type": "DeviceName",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.44840529110.691831579769"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "CommandDescriptionIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "TipoAyuda",
+                            "type": "Question",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.635513605740.1282160518163"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "UpdateDeviceIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "dispositivo",
+                            "type": "DeviceName",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.276786861773.546257310431"
+                            }
+                        },
+                        {
+                            "name": "propiedad",
+                            "type": "Property",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.233247870880.269546229951"
+                            }
+                        },
+                        {
+                            "name": "parametrosColor",
+                            "type": "AMAZON.Color",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "parametrosBrillo",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.44840529110.691831579769",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Puedes decirme el nombre del dispositivo?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.635513605740.1282160518163",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Quieres ayuda sobre cómo preguntar por el estado de los dispositivos, o sobre cómo cambiar su estado?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.276786861773.546257310431",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Puedes decirme el nombre del dispositivo?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1031048636949.523248351673",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "¿puedes repetirme cómo quieres poner {dispositivo} ?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.233247870880.269546229951",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "No he entendido qué es lo que quieres cambiar del dispositivo, ¿puedes repetirlo?"
+                    }
+                ]
+            }
+        ]
+    }
+}

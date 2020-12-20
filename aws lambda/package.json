@@ -1,0 +1,22 @@
+{
+  "name": "infodispositivos",
+  "version": "1.0.0",
+  "description": "An Alexa skill that uses multiple models.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ask-sdk-core": "^2.7.0",
+    "ask-sdk-model": "^1.26.0",
+    "aws4": "^1.10.1",
+    "https": "^1.0.0",
+    "q": "^1.5.1",
+    "strftime": "^0.10.0",
+    "uuid": "^3.3.3",
+    "i18next": "^10.5.0",
+    "i18next-sprintf-postprocessor": "^0.2.2"
+  }
+}
